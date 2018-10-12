@@ -1,0 +1,10 @@
+.pokefoto{
+    display: inline-block;
+    height: 150px;
+    margin: 30px;
+    box-shadow: 0 0 5px 0px white;
+}
+
+.pokefoto img{
+    height: 150px;
+}

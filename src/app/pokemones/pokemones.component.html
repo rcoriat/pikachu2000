@@ -1,5 +1,6 @@
 <div>
-  <ul>
-    <li *ngFor = "let pokemon of pokemones">{{pokemon.name}}</li>>
-  </ul>
+
+  <div class="pokefoto" *ngFor = "let pokemon of pokemones">
+      <img src={{pokemon.art_url}}>
+  </div>
 </div>
