@@ -1,0 +1,17 @@
+<div>
+    <img src="{{traigopokemon.art_url}}">            
+    <p>{{traigopokemon.name}}</p>
+    <div class="container">{{traigopokemon.description}}</div>
+    <ul> 
+        <li *ngFor="let tipo of tipos">{{tipo}}</li>
+    </ul>
+    <ul>
+      <li *ngFor="let evolucion of evoluciones">
+        {{evolucion.level}}
+        {{evolucion.method}}
+        {{evolucion.to}}
+    </ul>
+    
+    <button type="button" class="btn btn-dark">Regresar</button>
+
+</div>

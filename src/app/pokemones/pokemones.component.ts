@@ -8,13 +8,18 @@ import { PokeserviceService } from './../pokeservice.service';
 })
 export class PokemonesComponent implements OnInit {
   pokemones;
-
+  show:boolean;
   constructor(service: PokeserviceService) { 
     this.pokemones = service.getPokemones();
+    
   }
 
   ngOnInit() {
+    this.show = true;
   }
 
+  cambio(){
+    this.show = !this.show;
+  }
 
 }

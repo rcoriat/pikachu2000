@@ -12,11 +12,11 @@
     display: inline-block;
     height: 200px;
     margin: 30px;
-    box-shadow: 0 0 5px 0px black;
+    box-shadow: 0px 0px 0px 3px black;
 }
 
 .pokefoto:hover{
-    box-shadow: 0 0 5px 0px red;
+    box-shadow: 0 0 5px 0px black;
 }
 
 .pokefoto img{

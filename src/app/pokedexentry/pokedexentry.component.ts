@@ -9,8 +9,10 @@ import { PokemonesComponent } from '../pokemones/pokemones.component';
   styleUrls: ['./pokedexentry.component.css']
 })
 export class PokedexentryComponent implements OnInit {
+  evoluciones;
+  traigopokemon;
+  tipos;
 
-  traigopokemon: any[] = [];
   constructor(
     private ruta:ActivatedRoute,
     private servicio:PokeserviceService
@@ -18,10 +20,14 @@ export class PokedexentryComponent implements OnInit {
     this.ruta.params.subscribe(params=>{
       console.log(params['id'])
       this.traigopokemon = this.servicio.getPokemon(params['id'])
+      this.tipos = this.servicio.getPokemon(params['id']).types
+      this.evoluciones = this.servicio.getPokemon(params['id']).evolutions
     })
   }
+
 
   ngOnInit() {
   }
 
 }
+

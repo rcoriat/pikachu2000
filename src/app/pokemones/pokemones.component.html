@@ -1,8 +1,13 @@
-<div id="pokecontenedor">
+
+<div id="pokecontenedor" *ngIf="show">
   <div class="pokefoto" *ngFor = "let pokemon of pokemones;index as i">
-      <a [routerLink]="['/pokemon', i]">
+      <a [routerLink]="['/pokemon', i]" (click) = "cambio()">
         <img src="{{ pokemon.art_url }}">
       </a>
       <label>#{{ pokemon.pkdx_id }} {{ pokemon.name }}</label>
   </div>
+</div>
+
+<div id="pokeseleccionado" *ngIf="!show">
+  <app-pokedexentry></app-pokedexentry>
 </div>
