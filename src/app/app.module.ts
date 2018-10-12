@@ -14,7 +14,7 @@ import{ PokeserviceService } from './pokeservice.service';
 
 
 const routes: Routes = [
-  { path: 'pokemon', component: PokedexentryComponent }, 
+  { path: 'pokemon/:id', component: PokedexentryComponent }, 
   { path: '**', redirectTo: '##', pathMatch:'full'},
 
 ];
@@ -30,9 +30,6 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes) 
-  ],
-  exports: [
-    RouterModule
   ],
   providers: [
     PokeserviceService

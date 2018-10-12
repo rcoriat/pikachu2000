@@ -4658,6 +4658,20 @@ export class PokeserviceService {
   getPokemones(){
     return this.pokemones;
   }
+
+  getPokemonByName(nombre: string){
+    for(let busca of this.pokemones){
+      if(busca.name == nombre){
+        return busca;
+      }
+    }
+    console.log('ERROR: Pokemon no encontrado');
+    return null;
+  }
   
+  getPokemon(i){
+    return this.pokemones[i];
+  }
 
 }
+

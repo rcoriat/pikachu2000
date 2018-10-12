@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PokeserviceService } from './../pokeservice.service';
+import { ActivatedRoute } from '@angular/router';
+import { PokemonesComponent } from '../pokemones/pokemones.component';
 
 @Component({
   selector: 'app-pokedexentry',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexentryComponent implements OnInit {
 
-  constructor() { }
+  traigopokemon: any[] = [];
+  constructor(
+    private ruta:ActivatedRoute,
+    private servicio:PokeserviceService
+  ){
+    this.ruta.params.subscribe(params=>{
+      console.log(params['id'])
+      this.traigopokemon = this.servicio.getPokemon(params['id'])
+    })
+  }
 
   ngOnInit() {
   }

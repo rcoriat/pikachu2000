@@ -1,6 +1,8 @@
-<div>
-
-  <div class="pokefoto" *ngFor = "let pokemon of pokemones">
-      <img src={{pokemon.art_url}}>
+<div id="pokecontenedor">
+  <div class="pokefoto" *ngFor = "let pokemon of pokemones;index as i">
+      <a [routerLink]="['/pokemon', i]">
+        <img src="{{ pokemon.art_url }}">
+      </a>
+      <label>#{{ pokemon.pkdx_id }} {{ pokemon.name }}</label>
   </div>
 </div>
