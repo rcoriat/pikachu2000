@@ -8,6 +8,12 @@ import { FooterComponent } from './footer/footer.component';
 
 import { setTheme } from 'ngx-bootstrap/utils';
 
+//JSON
+import { HttpClientModule } from '@angular/common/http';
+
+//Servicios
+import{ PokeserviceService } from './pokeservice.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +22,12 @@ import { setTheme } from 'ngx-bootstrap/utils';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PokeserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
