@@ -31,3 +31,4 @@ export class PokedexentryComponent implements OnInit {
 
 }
 
+
