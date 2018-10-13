@@ -9,20 +9,40 @@ import { PokemonesComponent } from '../pokemones/pokemones.component';
   styleUrls: ['./pokedexentry.component.css']
 })
 export class PokedexentryComponent implements OnInit {
-  evoluciones;
+  evoluciones = [];
   traigopokemon;
   tipos;
+  evopoke = [];
+
 
   constructor(
     private ruta:ActivatedRoute,
     private servicio:PokeserviceService
   ){
     this.ruta.params.subscribe(params=>{
-      console.log(params['id'])
       this.traigopokemon = this.servicio.getPokemon(params['id'])
       this.tipos = this.servicio.getPokemon(params['id']).types
       this.evoluciones = this.servicio.getPokemon(params['id']).evolutions
+
+      for(let i of this.evoluciones){
+        if(this.servicio.getPokemonByName((String)(i.to)) == null){
+          continue;
+        }
+        this.evopoke.push(this.servicio.getPokemonByName((String)(i.to)))
+      }
+      console.log(this.evopoke)
     })
+  }
+
+  tieneEvoluciones(){
+    if(this.evoluciones == []){
+      return false;
+    } else if(this.evopoke.length == 0) {
+      return false;
+    }
+    else {
+      return true;
+    }    
   }
 
 

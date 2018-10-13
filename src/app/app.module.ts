@@ -15,8 +15,6 @@ import{ PokeserviceService } from './pokeservice.service';
 
 const routes: Routes = [
   { path: 'pokemon/:id', component: PokedexentryComponent }, 
-  { path: '**', redirectTo: '##', pathMatch:'full'},
-
 ];
 
 @NgModule({

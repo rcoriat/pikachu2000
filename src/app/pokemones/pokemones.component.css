@@ -12,11 +12,13 @@
     display: inline-block;
     height: 200px;
     margin: 30px;
-    box-shadow: 0px 0px 0px 3px black;
+    box-shadow: 0px 0px 0px 3px rgb(44, 43, 43);
+
+    background-color: rgb(44, 43, 43);
 }
 
 .pokefoto:hover{
-    box-shadow: 0 0 5px 0px black;
+    box-shadow: 0px 0px 1px 3px black;
 }
 
 .pokefoto img{
@@ -27,8 +29,13 @@
 .pokefoto label{
     display: block;
     font-size: 18px;
-    color: black;
+    color: #FFD33F;
     font-weight: bold;
     margin-top: 10px !important;
     margin-bottom: 0 !important;
+}
+
+.btn{
+    color: #FFD33F;
+    background-color: black;
 }

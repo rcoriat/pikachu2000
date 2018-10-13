@@ -1,17 +1,24 @@
-<div>
-    <img src="{{traigopokemon.art_url}}">            
-    <p>{{traigopokemon.name}}</p>
-    <div class="container">{{traigopokemon.description}}</div>
-    <ul> 
-        <li *ngFor="let tipo of tipos">{{tipo}}</li>
-    </ul>
-    <ul>
-      <li *ngFor="let evolucion of evoluciones">
-        {{evolucion.level}}
-        {{evolucion.method}}
-        {{evolucion.to}}
-    </ul>
+<div class ="container">
+    <img id="pokimagen" src="{{traigopokemon.art_url}}">  
+    <div id="pokedemas">             
+        <h3>{{traigopokemon.name}}</h3><br>
+        <div style="text-align: justify !important">{{traigopokemon.description}}</div><br>
+        <p style="text-align: left !important; font-weight: bold; font-size: 30px; margin-bottom: 30px;">Tipo(s)</p>
+        <ul> 
+            <li *ngFor="let tipo of tipos">{{tipo}}</li>
+        </ul>
+    </div>
+        <h3 style="text-align: left !important">Evoluciona a:</h3><br>
+        <div id="evolucion" *ngIf="tieneEvoluciones()">
+            <ul>
+                <li *ngFor="let evolucion of evoluciones; index as i">
+                    <img id="pokpeque" src="{{traigopokemon.art_url}}">
+                    {{evolucion.to}}<br>
+                    <div *ngIf="evolucion.level != null" >Evoluciona en nivel: {{evolucion.level}}</div><br>
+                    Evoluciona por método: {{evolucion.method}}<br>
+                    <img src="{{evopoke[i].art_url}}" ><br>
+                </li>
+            </ul>
+        </div>
     
-    <button type="button" class="btn btn-dark">Regresar</button>
-
 </div>

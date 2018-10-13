@@ -1,5 +1,36 @@
-.btn{
-    color: #FFD33F;
-    background-color: black;
+.container{
+    width: 80%;
+    text-align: center;
 }
 
+h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#pokimagen{
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+#pokedemas{
+    padding-top: 50px;
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+    font-size: 20px;
+}
+
+#evolucion{
+    width: 80%;
+}
+
+#pokepeque{
+    display: inline-block;
+    width: 70px;
+}
