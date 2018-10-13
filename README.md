@@ -1,6 +1,6 @@
 # Pikachu2000
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+[Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
 
 ## GitHub
 Solo aparacen commits hechos por @rcoriat porque se utilizó la herramienta de Visual Studio Code:Live Share, que permite compartir el espacio de trabajo desde una sola computadora:
