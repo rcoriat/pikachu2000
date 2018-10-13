@@ -2,23 +2,35 @@
     <img id="pokimagen" src="{{traigopokemon.art_url}}">  
     <div id="pokedemas">             
         <h3>{{traigopokemon.name}}</h3><br>
-        <div style="text-align: justify !important">{{traigopokemon.description}}</div><br>
-        <p style="text-align: left !important; font-weight: bold; font-size: 30px; margin-bottom: 30px;">Tipo(s)</p>
+        <div style="text-align: justify !important; font-size: 20px;">{{traigopokemon.description}}</div><br>
+        <p style="font-weight: bold; font-size: 30px; margin-bottom: 30px;">Tipo(s)</p>
         <ul> 
             <li *ngFor="let tipo of tipos">{{tipo}}</li>
         </ul>
     </div>
-        <h3 style="text-align: left !important">Evoluciona a:</h3><br>
-        <div id="evolucion" *ngIf="tieneEvoluciones()">
-            <ul>
-                <li *ngFor="let evolucion of evoluciones; index as i">
-                    <img id="pokpeque" src="{{traigopokemon.art_url}}">
-                    {{evolucion.to}}<br>
-                    <div *ngIf="evolucion.level != null" >Evoluciona en nivel: {{evolucion.level}}</div><br>
-                    Evoluciona por método: {{evolucion.method}}<br>
-                    <img src="{{evopoke[i].art_url}}" ><br>
-                </li>
-            </ul>
+        
+        <div *ngIf="tieneEvoluciones()">
+        <h3 style="text-align: left !important">Evoluciona a</h3><br>
+            <div id="evolucion">
+                <ul>
+                    <li *ngFor="let evolucion of evoluciones; index as i">
+                        <div id="izquierda">
+                            <img class="pokepeque" src="{{traigopokemon.art_url}}">
+                        </div>
+                        <div id="intermedio">
+                            <div> 
+                                <div *ngIf="evolucion.level != null" >En el nivel: {{evolucion.level}}</div>
+                                <img style="width: 60%; height: auto;" src="./../../assets/arrow.png"><br>
+                                Por método: {{evolucion.method}}
+                            </div> 
+                        </div>
+                        <div id="derecha">
+                            <b>{{evolucion.to}}</b><br>
+                            <img class="pokepeque" src="{{evopoke[i].art_url}}" ><br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     
 </div>

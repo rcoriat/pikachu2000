@@ -10,8 +10,10 @@ h3{
 
 #pokimagen{
     display: inline-block;
-    width: 49%;
+    width: 40%;
     vertical-align: top;
+    margin-right:45px;
+    margin-top:30px;
 }
 
 #pokedemas{
@@ -24,13 +26,33 @@ h3{
 ul{
     list-style: none;
     font-size: 20px;
+    padding-left: 0;
 }
 
 #evolucion{
     width: 80%;
+    height:268px;
+    display:block;
+    margin: 0 auto;
 }
 
-#pokepeque{
+.pokepeque{
+    width: 85%;
+    height: auto;
+}
+
+#izquierda{
     display: inline-block;
-    width: 70px;
+    width: 33%;
+}
+
+#intermedio{
+    display:inline-block;
+    height: 268px;
+    width: 33%;
+}
+
+#derecha{
+    display: inline-block;
+    width: 33%;
 }
