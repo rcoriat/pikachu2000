@@ -15,7 +15,10 @@ import{ PokeserviceService } from './pokeservice.service';
 
 const routes: Routes = [
   { path: 'pokemon/:id', component: PokedexentryComponent }, 
+
 ];
+
+
 
 @NgModule({
   declarations: [
@@ -39,5 +42,5 @@ export class AppModule {
     setTheme('bs4');
   }
   
-
+ 
  }
