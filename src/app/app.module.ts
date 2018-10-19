@@ -15,6 +15,7 @@ import{ PokeserviceService } from './pokeservice.service';
 
 const routes: Routes = [
   { path: 'pokemon/:id', component: PokedexentryComponent }, 
+  { path: 'pokedex', component: PokemonesComponent }, 
 
 ];
 

@@ -20,7 +20,6 @@ export class PokemonesComponent implements OnInit {
 
   cambio(){
     this.show = !this.show;
-    console.log(this.show);
   }
 
 }

@@ -56,3 +56,10 @@ ul{
     display: inline-block;
     width: 33%;
 }
+
+.btn{
+    color: #FFD33F;
+    background-color: black;
+    margin-right: 2%;
+    
+}
